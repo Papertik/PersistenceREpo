@@ -76,7 +76,8 @@ void performCalculations(int input, int base){
             if (p == stepper){
                 myList[stepper] = i;
                 resultList[stepper] = from_deci(temp, i, base);
-                i = myList[stepper] + pow(stepper, stepper);
+                //Optimized Code Below
+                //i = myList[stepper] + pow(stepper, stepper);
 
                 cout << stepper << "\t" << myList[stepper] << "\t\t\t" << resultList[stepper] << endl;
                 stepper++;
