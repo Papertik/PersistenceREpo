@@ -1,5 +1,6 @@
 #ifndef CONVERT
 #define CONVERT
+#include "convert.cpp"
 
 int val(char c);
 int to_deci(char *str, int base);
