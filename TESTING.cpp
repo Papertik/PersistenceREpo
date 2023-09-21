@@ -49,9 +49,9 @@ int numPersistant(unsigned long long int n){
 void performCalculations(int input, int base){
     //Variables
     char temp[100];
-    int p;
-    int stepper = 0;
-    int increment = 1;
+    int p; //persistence number calculated
+    int stepper = 0; //persistence we are looking for
+    int increment = 1; //iterator increment
     string mainSubTest = "";
     string mainStrTest = "";
     string sortStr;
@@ -61,8 +61,8 @@ void performCalculations(int input, int base){
 
     auto s1 = high_resolution_clock::now(); //START CLOCK
 
-    cout << endl << endl << "BASE-10" << "\t\t\t" << "BASE-" + to_string(base) << endl; //Table Title
-    cout << "-------------------------------" << endl; //Table Divider
+    cout << endl << endl << "P " << "\t" << "BASE-10" << "\t\t\t" << "BASE-" + to_string(base) << endl; //Table Title
+    cout << "-----------------------------------------------------" << endl; //Table Divider
     
 
     while (i < input + 1){
@@ -78,13 +78,13 @@ void performCalculations(int input, int base){
                 resultList[stepper] = from_deci(temp, i, base);
                 i = myList[stepper] + pow(stepper, stepper);
 
-                cout << myList[stepper] << "\t\t\t" << resultList[stepper] << endl;
+                cout << stepper << "\t" << myList[stepper] << "\t\t\t" << resultList[stepper] << endl;
                 stepper++;
             }
         }
         i++;
     }
-    cout << "-------------------------------" << endl << endl;
+    cout << "-----------------------------------------------------" << endl << endl;
 
     auto e1 = high_resolution_clock::now(); //END CLOCK
     auto d1 = duration_cast<milliseconds>(e1 - s1); //FIND CLOCK DIFF.
