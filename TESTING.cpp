@@ -96,7 +96,7 @@ int main(){
     int input, base;
 
     //Take User input
-    cout << "Enter Max Search Range: "; cin >> input;
+    cout << "Enter Max Search Range: "; cin >> input; cin.clear();
     cout << "Enter Number Base for Results: "; cin >> base;
 
     performCalculations(input, base); //Performs Calculations
